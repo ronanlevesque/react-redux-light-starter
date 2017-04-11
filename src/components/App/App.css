@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+  color: #fff;
+}
+
+.logo {
+  margin: auto;
+  display: block;
+  width: 120px;
+  height: 120px;
+}

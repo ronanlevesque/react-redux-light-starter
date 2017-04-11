@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppTest 1`] = `
+<div>
+  <img
+    alt="React logo"
+    className="logo"
+    src={undefined {}}
+  />
+  <h1
+    className="title"
+  >
+    Hello world!
+  </h1>
+</div>
+`;

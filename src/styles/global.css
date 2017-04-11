@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-image: url('../img/background.png');
+}
