@@ -3,8 +3,8 @@
 A small boilerplate including just the essentials:
 
 - React
-- hot module replacement
-- redux
+- Hot Module Replacement
+- Redux
 - Jest
 - ESLint (Airbnb rules)
 - CSS modules
