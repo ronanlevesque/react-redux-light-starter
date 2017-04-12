@@ -8,6 +8,7 @@ A small boilerplate including just the essentials:
 - Jest
 - ESLint (Airbnb rules)
 - CSS modules
+- stylelint (custom rules)
 - webpack
 
 ## How-to
