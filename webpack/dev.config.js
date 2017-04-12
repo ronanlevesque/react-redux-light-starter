@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const DIRNAME = __dirname + '/../';
@@ -78,6 +79,9 @@ module.exports = {
 
   plugins: [
     new CaseSensitivePathsPlugin(),
+    new StyleLintPlugin({
+      files: 'src/**/*.css',
+    }),
     new HtmlWebpackPlugin({
       template: 'index.html',
       inject: 'body',
