@@ -5,6 +5,7 @@ A small boilerplate including just the essentials:
 - React
 - Hot Module Replacement
 - Redux
+- Babel
 - Jest
 - ESLint (Airbnb rules)
 - CSS modules
@@ -13,11 +14,14 @@ A small boilerplate including just the essentials:
 
 ## How-to
 
-- run: `yarn && yarn start`.
-- test: `yarn test`.
-- build: `yarn build`.
+- install: `yarn`
+- run: `yarn start` (available at `http://localhost:4000/`)
+- test: `yarn test`
+- build: `yarn build`
 
 (Or use npm if you prefer).
+
+Make sure to check `src` for a simple example.
 
 ## Build assets
 
