@@ -12,9 +12,13 @@ A small boilerplate including just the essentials:
 - stylelint (custom rules)
 - webpack
 
-## How-to
+## Getting started
 
-- install: `yarn`
+- Clone (or download) the repository
+- Run `yarn` in the folder
+
+## Usage
+
 - run: `yarn start` (available at `http://localhost:4000/`)
 - test: `yarn test`
 - build: `yarn build`
