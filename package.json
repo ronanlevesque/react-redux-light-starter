@@ -1,8 +1,12 @@
 {
-  "name": "react-redux-starter",
-  "version": "1.0.0",
+  "name": "react-redux-light-starter",
+  "version": "1.0.2",
   "author": "Ronan Levesque",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronanlevesque/react-redux-light-starter.git"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --inline --content-base public --history-api-fallback --config webpack/dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack/build.config.js",
