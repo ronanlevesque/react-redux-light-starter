@@ -6,25 +6,22 @@ import store from './store/configureStore';
 import App from './components/App/App';
 import './styles/global.css';
 
-render(
-  <Provider store={store}>
-    <AppContainer>
-      <App />
-    </AppContainer>
-  </Provider>,
-  document.getElementById('root'),
+const renderApp = Component => (
+  render(
+    <Provider store={store}>
+      <AppContainer>
+        <Component />
+      </AppContainer>
+    </Provider>,
+    document.getElementById('root'),
+  )
 );
+
+renderApp(App);
 
 if (module.hot) {
   module.hot.accept('./components/App/App', () => {
     const NewApp = require('./components/App/App').default; //eslint-disable-line
-    render(
-      <Provider store={store}>
-        <AppContainer>
-          <NewApp />
-        </AppContainer>
-      </Provider>,
-      document.getElementById('root'),
-    );
+    renderApp(NewApp);
   });
 }
