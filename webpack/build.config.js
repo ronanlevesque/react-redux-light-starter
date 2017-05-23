@@ -74,6 +74,13 @@ module.exports = {
               gifsicle: {
                 interlaced: false,
               },
+              svgo: {
+                plugins: [
+                  {
+                    cleanupIDs: false,
+                  },
+                ],
+              },
             },
           },
         ],
