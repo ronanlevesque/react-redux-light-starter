@@ -1,6 +1,6 @@
 {
   "name": "react-redux-light-starter",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Ronan Levesque",
   "license": "MIT",
   "repository": {
@@ -8,7 +8,8 @@
     "url": "https://github.com/ronanlevesque/react-redux-light-starter.git"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --content-base public --history-api-fallback --config webpack/dev.config.js",
+    "start":
+      "cross-env NODE_ENV=development webpack-dev-server --inline --content-base public --history-api-fallback --config webpack/dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack/build.config.js",
     "test": "jest --watch"
   },
@@ -36,9 +37,9 @@
     "html-webpack-plugin": "^2.30.1",
     "identity-obj-proxy": "^3.0.0",
     "image-webpack-loader": "^3.4.2",
-    "jest": "^21.0.1",
+    "jest": "^21.2.1",
+    "jest-css-modules": "^1.1.0",
     "postcss-cssnext": "^3.0.2",
-    "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
     "stylelint": "^8.1.1",
@@ -47,18 +48,19 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-hot-loader": "next",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-hot-loader": "^3.0.0",
     "react-redux": "^5.0.6",
-    "react-test-renderer": "^15.6.1",
+    "react-test-renderer": "^15.6.2",
     "redux": "^3.7.2"
   },
   "jest": {
     "verbose": true,
     "moduleNameMapper": {
-      "\\.(scss|css|sass|stylus|less)$": "identity-obj-proxy",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(?:[?]?#[a-zA-Z]+)?$": "identity-obj-proxy"
+      "\\.(scss|css|sass|stylus|less)$": "<rootDir>/empty-module.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(?:[?]?#[a-zA-Z]+)?$":
+        "<rootDir>/empty-module.js"
     }
   }
 }

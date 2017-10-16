@@ -1,14 +1,9 @@
 import { createStore, compose } from 'redux';
 import rootReducer from '../reducers';
 
-const enhancer = compose(
-  window.devToolsExtension ? window.devToolsExtension() : f => f,
-);
+const enhancer = compose(window.devToolsExtension ? window.devToolsExtension() : f => f);
 
-const store = createStore(
-  rootReducer,
-  enhancer,
-);
+const store = createStore(rootReducer, enhancer);
 
 if (module.hot) {
   module.hot.accept('../reducers', () => {

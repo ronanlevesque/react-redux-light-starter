@@ -6,7 +6,7 @@ import store from './store/configureStore';
 import App from './components/App/App';
 import './styles/global.css';
 
-const renderApp = Component => (
+const renderApp = Component =>
   render(
     <Provider store={store}>
       <AppContainer>
@@ -14,8 +14,7 @@ const renderApp = Component => (
       </AppContainer>
     </Provider>,
     document.getElementById('root'),
-  )
-);
+  );
 
 renderApp(App);
 

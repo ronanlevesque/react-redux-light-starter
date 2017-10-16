@@ -12,26 +12,23 @@ module.exports = {
   devServer: {
     hot: true,
     publicPath: '/',
-    port: 4000,
+    port: 4000
   },
 
   resolve: {
-    modules: [
-      path.join(DIRNAME, 'src'),
-      'node_modules',
-    ],
+    modules: [path.join(DIRNAME, 'src'), 'node_modules']
   },
 
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:4000',
-    path.resolve(DIRNAME, 'src'),
+    path.resolve(DIRNAME, 'src')
   ],
 
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].chunk.js',
-    publicPath: '/',
+    publicPath: '/'
   },
 
   module: {
@@ -40,28 +37,25 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         include: path.resolve(DIRNAME),
-        use: [
-          'babel-loader',
-          'eslint-loader',
-        ],
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: 'style-loader'
           },
           {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
-            },
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
           },
           {
-            loader: 'postcss-loader',
-          },
-        ],
+            loader: 'postcss-loader'
+          }
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -69,24 +63,24 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-            },
-          },
-        ],
-      },
-    ],
+              name: '[name].[ext]'
+            }
+          }
+        ]
+      }
+    ]
   },
 
   plugins: [
     new CaseSensitivePathsPlugin(),
     new StyleLintPlugin({
-      files: 'src/**/*.css',
+      files: 'src/**/*.css'
     }),
     new HtmlWebpackPlugin({
       template: 'index.html',
-      inject: 'body',
+      inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-  ],
+    new webpack.NamedModulesPlugin()
+  ]
 };

@@ -4,9 +4,7 @@ import renderer from 'react-test-renderer';
 import App from './App';
 
 // Snapshot testing
-test('AppTest', () => {
-  const component = renderer.create(
-    <App />
-  );
-  expect(component.toJSON()).toMatchSnapshot();
+it('renders a snapshot', () => {
+  const tree = renderer.create(<App />).toJSON();
+  expect(tree).toMatchSnapshot();
 });

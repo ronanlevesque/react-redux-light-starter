@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppTest 1`] = `
+exports[`renders a snapshot 1`] = `
 <div
-  className="wrapper"
+  className={undefined}
 >
   <div
-    className="content"
+    className={undefined}
   >
     <img
       alt="React logo"
-      className="logo"
-      src={undefined {}}
+      className={undefined}
+      src=""
     />
     <h1
-      className="title"
+      className={undefined}
     >
       Hello world!
     </h1>
